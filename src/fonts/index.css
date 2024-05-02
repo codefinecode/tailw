@@ -1,0 +1,29 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');*/
+@font-face {
+  font-family: adlib;
+  src: url('AdLib.woff');
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*@tailwind variants;*/
+
+body{
+  font-family: adlib;
+}
+/*h1{*/
+
+/*}*/
+/*.mt-auto{*/
+/*  margin-top: auto;*/
+/*}*/
+/*.mx-auto{*/
+/*  margin-left: auto;*/
+/*  margin-right: auto;*/
+/*}*/
+/*.mt-4{*/
+/*  margin-top: 1rem;*/
+/*}*/
+/*.mt-5{*/
+/*  margin-top: 1.25rem;*/
+/*}*/

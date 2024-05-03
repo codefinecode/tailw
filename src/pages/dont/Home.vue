@@ -10,6 +10,7 @@ import FingerWithArrow from "@/components/FingerWithArrow.vue";
 import pic from "@/components/picture.vue";
 import Menu from "@/components/Menu.vue";
 import ProgressLine from "@/components/ProgressLine.vue";
+import ProgressCircle from "@/components/ProgressCircle.vue";
 
 
 export default {
@@ -18,6 +19,7 @@ export default {
     pic,
     Menu,
     ProgressLine,
+    ProgressCircle,
     DontLogo,
     Start2group,
     Start2lettering,
@@ -58,7 +60,8 @@ export default {
         <p class="big-digits text-black mt-12.5">355</p>
       </k-block>
       <k-block class="w-full flex justify-end safe-areas mr-5.5">
-        <pic icon-src="home/x2blue_bordered.svg" alt="x2"/>
+        <progress-circle :progress="75" color="#ff6347"/>
+<!--        <pic icon-src="home/x2blue_bordered.svg" alt="x2"/>-->
       </k-block>
     </k-block>
     <k-block class="my-15 flex justify-center">
@@ -81,7 +84,7 @@ export default {
         </k-block>
       </k-block>
       <k-block class="m-5.5">
-        <ProgressLine />
+        <ProgressLine :progress="50" color="#ff6347" trackColor="#e0e0e0" />
       </k-block>
       <k-block>
         <Menu active="home" />

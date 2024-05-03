@@ -45,7 +45,7 @@ export default {
 </script>
 
 <template>
-  <k-page class="bg-white  h-screen flex flex-col" @click="$router.replace({ path: '/home' })" >
+  <k-page class="bg-white  h-screen flex flex-col" @click="$router.push({ path: '/home' })" >
     <k-block-title class="w-full flex justify-center  mt-7.5">
       <DontLogo style="height: 81px;width: 81px;" class="mx-auto"/>
     </k-block-title>

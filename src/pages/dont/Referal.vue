@@ -13,7 +13,7 @@ import ProgressLine from "@/components/ProgressLine.vue";
 
 
 export default {
-  name: 'Leaderboard',
+  name: 'Referal',
   components: {
     ProgressLine,
     pic,
@@ -90,81 +90,56 @@ export default {
 
 <template>
   <k-page class="bg-white  h-screen flex flex-col" >
-<!--    @click="$router.push({ path: '/start2' })"-->
-    <k-block class="w-full  text-center   mt-7.5 ">
-      <k-block class="atma w-full">
-        Olo-lo
-      </k-block>
-      <k-block class="w-full text-3xl text-light-blue ">
-        League name
-      </k-block>
-      <k-block class="w-full text-black big-digits mt-5.5">
-        34
-      </k-block>
-      <k-block class="flex w-full justify-center mt-12.5">
-        <ProgressLine />
-      </k-block>
-    </k-block>
-    <k-block class="text-center mt-5.5">
-    <k-block class="flex w-full justify-center">
-      <pic icon-src="foundation_arrow-down.svg"/>
-    </k-block>
-    <k-block class="w-full text-xl text-gray-300 ">
-      Next League
-    </k-block>
-    <k-block class="w-full text-3xl  text-gray-300 ">
-      100
-    </k-block>
-    </k-block>
 
-    <k-block class=" mt-5.5  flex justify-center">
-      <div class="relative text-center">
-        <div class="absolute h-full w-full flex justify-center items-center">
-          <p class=" text-2xl   text-center text-white atma ">Invite a dude</p>
+    
+    <k-block class="px-5.5" @click="$router.push({ path: '/referal-empty' })">
+      <k-block class="w-full mt-5.5 text-center flex justify-center items-baseline mt-1em ">
+        <p class="atma">By inviting a dude, you'll get those kinds of cookies:</p>
+      </k-block>
+      <k-block class="mt-5.5 p-5.5 atma relative w-full"
+               style="background: url('/src/images/Referal/bg.svg') no-repeat">
+        <b >1. You and your dude X100 for 10 minutes</b>
+      </k-block>
+       <k-block class="mt-5.5 p-5.5 atma relative w-full"
+               style="background: url('/src/images/Referal/bg.svg') no-repeat">
+        <b >1. When your dude hits 100,000 $DONT - You and your dude X150 for 10 minutes</b>
+      </k-block>
+
+
+
+      <k-block class=" mt-5.5  flex justify-center">
+        <div class="relative text-center">
+          <div class="absolute h-full w-full flex justify-center items-center">
+            <p class=" text-2xl   text-center text-white atma ">Invite a dude</p>
+          </div>
+          <pic icon-src="button_back.svg"/>
         </div>
-        <pic icon-src="button_back.svg"/>
-      </div>
+      </k-block>
+      <k-block>
+        <p class="atma text-center text-lg"> to get MORE </p>
+      </k-block>
+
+
     </k-block>
-
-
-    <k-block>
-      <p class="atma text-center text-lg"> to get MORE </p>
-    </k-block>
-
-
     <k-block class="w-full  mt-auto pt-5.5 " :style="`background: url(/src/images/Leaderboard/${ scoreOpened ? 'bg_opened.svg' : 'bg_closed.svg'})`">
       <k-block class=" flex justify-center w-full">
         <pic
-          :icon-src="`Leaderboard/${ scoreOpened ? 'arrow_close.svg' : 'arrow_open.svg'}`"
-          @click="scoreOpened = !scoreOpened"
+            :icon-src="`Leaderboard/${ scoreOpened ? 'arrow_close.svg' : 'arrow_open.svg'}`"
+            @click="scoreOpened = !scoreOpened"
         />
+
+      </k-block>
+      <k-block class="w-full text-center atma text-xl">
+        <p>Your dudes</p>
       </k-block>
 
-      <k-block class="w-full flex justify-around items-center">
-        <k-block class=" ">
-          <div class="relative">
-            <div class="absolute h-full w-full flex justify-center items-center">
-              <p class=" text-2xl w-2/3 text-center ">All time</p>
-            </div>
-            <pic icon-src="Leaderboard/button_left_blue.svg"/>
-          </div>
-        </k-block>
-        <k-block class=" ">
-          <div class="relative">
-            <div class="absolute h-full w-full flex justify-center items-center">
-              <p class=" text-2xl w-2/3 text-center  ">Daily</p>
-            </div>
-            <pic icon-src="Leaderboard/button_right_light-blue.svg"/>
-          </div>
-        </k-block>
-      </k-block>
 
-      <k-list  outline-ios class="atma px-5.5 mt-5.5">
+      <k-list   outline-ios class="atma px-5.5 mt-5.5">
         <k-list-item class="my-1em" :title="pers.name"   v-for="pers  in scoreOpened ? scoreList : scoreList.slice(0,3)" :key="pers.num">
           <template #media>
             <k-block class="flex justify-between items-center">
-            <span class="">{{ pers.num}}</span>
-            <pic :icon-src="pers.avatar" class="mx-4.5" />
+              <span class="">{{ pers.num}}</span>
+              <pic :icon-src="pers.avatar" class="mx-4.5" />
             </k-block>
           </template>
           <template #after>
@@ -175,11 +150,9 @@ export default {
 
       </k-list>
 
-      <k-block class="m-5.5">
-        <pic icon-src="progress_line.svg"/>
-      </k-block>
+
       <k-block>
-        <Menu active="leaderboard" />
+        <Menu active="dudes" />
       </k-block>
     </k-block>
   </k-page>

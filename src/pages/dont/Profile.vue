@@ -51,12 +51,12 @@ export default {
 <template>
   <k-page class="bg-white  h-screen flex flex-col ">
     <k-block class="px-5.5">
-      <!--    @click="$router.replace({ path: '/start2' })"-->
+      <!--    @click="$router.push({ path: '/start2' })"-->
       <k-block class="w-full  flex justify-between   mt-7.5 ">
         <k-block class="w-full text-xl  ">
           Total balance
         </k-block>
-        <pic icon-src="Profile/faq_button.svg" class=""/>
+        <pic icon-src="Profile/faq_button.svg" class="" @click="$router.push({ path: '/f-a-q' })"/>
       </k-block>
 
 

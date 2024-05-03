@@ -41,7 +41,7 @@ export default {
 </script>
 
 <template>
-  <k-page class="bg-white  h-screen flex flex-col " @click="$router.replace({ path: '/start3' })">
+  <k-page class="bg-white  h-screen flex flex-col " @click="$router.push({ path: '/start3' })">
     <k-block-title class="w-full flex justify-center  mt-7.5">
       <DontLogo style="height: 81px;width: 81px;" class="mx-auto"/>
     </k-block-title>
@@ -60,7 +60,7 @@ export default {
     <k-block class="w-full flex justify-between items-center mt-auto">
       <FingerWithArrow
           class="-mb-12.5 ml-12.5"
-          @click="$router.replace({ path: '/start3' })"
+          @click="$router.push({ path: '/start3' })"
       />
       <ManStart class=" "/>
     </k-block>

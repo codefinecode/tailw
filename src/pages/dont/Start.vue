@@ -46,7 +46,7 @@ export default {
     <k-block class="w-full flex justify-center">
       <LetsGo
         class="w-1/2 mx-auto"
-        @click="$router.replace({ path: '/start2' })"
+        @click="$router.push({ path: '/start2' })"
       />
     </k-block>
     <k-block class="w-full flex justify-center">

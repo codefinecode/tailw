@@ -4,6 +4,9 @@ import Start3 from './pages/dont/Start3.vue';
 import Home from './pages/dont/Home.vue';
 import Leaderboard from './pages/dont/Leaderboard.vue';
 import Profile from './pages/dont/Profile.vue';
+import Referal from './pages/dont/Referal.vue';
+import ReferalEmpty from './pages/dont/ReferalEmpty.vue';
+import FAQ from './pages/dont/FAQ.vue';
 
 const routes = [
   Start,
@@ -12,6 +15,9 @@ const routes = [
   Home,
   Leaderboard,
   Profile,
+  Referal,
+  ReferalEmpty,
+  FAQ,
 
 ].map((component) => {
   const name = component.name;

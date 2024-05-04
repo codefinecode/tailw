@@ -38,7 +38,7 @@ const routes = [
         char.match(/[A-Z]/) && index !== 0 ? ` ${char}` : char
       )
       .join('');
-  console.log('path',path,'title',title)
+  // console.log('path',path,'title',title)
   return {
     component,
     path: name === 'Start' ? '/' : path,

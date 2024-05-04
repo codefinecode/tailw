@@ -36,61 +36,52 @@ export default {
   data() {
     return {
       scoreOpened: false,
-      scoreList:[
+      scoreList: [
         {
-          num:1,
-          avatar:'Leaderboard/people_01.png',
+          num: 1,
+          avatar: 'Leaderboard/people_01.png',
           name: 'La_LA',
           score: 12.012
         },
         {
-          num:2,
-          avatar:'Leaderboard/people_01.png',
+          num: 2,
+          avatar: 'Leaderboard/people_01.png',
           name: 'Rich',
           score: 11.212
         },
         {
-          num:3,
-          avatar:'Leaderboard/people_01.png',
+          num: 3,
+          avatar: 'Leaderboard/people_01.png',
           name: 'Rich2',
           score: 10.500
         },
         {
-          num:4,
-          avatar:'Leaderboard/people_01.png',
+          num: 4,
+          avatar: 'Leaderboard/people_01.png',
           name: 'La_LA',
           score: 12.012
         },
         {
-          num:5,
-          avatar:'Leaderboard/people_01.png',
+          num: 5,
+          avatar: 'Leaderboard/people_01.png',
           name: 'Rich',
           score: 10.500
         },
         {
-          num:300,
-          avatar:'Leaderboard/people_01.png',
+          num: 300,
+          avatar: 'Leaderboard/people_01.png',
           name: 'Olo_lo (You)',
           score: 10.500
         },
       ],
     }
   },
-  methods: {
-    boo() {
-      console.log('boo')
-    }
-  },
-  mounted() {
-    console.log('start3 loaded')
-  }
-
 }
 </script>
 
 <template>
-  <k-page class="bg-white  h-screen flex flex-col" >
-<!--    @click="$router.push({ path: '/start2' })"-->
+  <k-page class="bg-white  h-screen flex flex-col">
+    <!--    @click="$router.push({ path: '/start2' })"-->
     <k-block class="w-full  text-center   mt-7.5 ">
       <k-block class="atma w-full">
         Olo-lo
@@ -102,20 +93,20 @@ export default {
         34
       </k-block>
       <k-block class="flex w-full justify-center mt-12.5">
-        <ProgressLine :progress="34" color="#2BABEE" trackColor="#C9DAE9" />
+        <ProgressLine :progress="34" color="#2BABEE" trackColor="#C9DAE9"/>
 
       </k-block>
     </k-block>
     <k-block class="text-center mt-5.5">
-    <k-block class="flex w-full justify-center">
-      <pic icon-src="foundation_arrow-down.svg"/>
-    </k-block>
-    <k-block class="w-full text-xl text-gray-300 ">
-      Next League
-    </k-block>
-    <k-block class="w-full text-3xl  text-gray-300 ">
-      100
-    </k-block>
+      <k-block class="flex w-full justify-center">
+        <pic icon-src="foundation_arrow-down.svg"/>
+      </k-block>
+      <k-block class="w-full text-xl text-gray-300 ">
+        Next League
+      </k-block>
+      <k-block class="w-full text-3xl  text-gray-300 ">
+        100
+      </k-block>
     </k-block>
 
     <k-block class=" mt-5.5  flex justify-center">
@@ -132,14 +123,12 @@ export default {
       <p class="atma text-center text-lg"> to get MORE </p>
     </k-block>
 
-<!--    :style="`background: url(/src/images/Leaderboard/${ scoreOpened ? 'bg_opened.svg' : 'bg_closed.svg'})  center center / 100% 100% no-repeat; height: 100%;width:100%;`">-->
-
     <k-block class="w-full  mt-auto pt-5.5 "
              :style="`background: url(/src/images/Leaderboard/bg_opened.svg) no-repeat; background-size: 100% auto; min-height: auto;`">
       <k-block class=" flex justify-center w-full">
         <pic
-          :icon-src="`Leaderboard/${ scoreOpened ? 'arrow_close.svg' : 'arrow_open.svg'}`"
-          @click="scoreOpened = !scoreOpened"
+            :icon-src="`Leaderboard/${ scoreOpened ? 'arrow_close.svg' : 'arrow_open.svg'}`"
+            @click="scoreOpened = !scoreOpened"
         />
       </k-block>
 
@@ -162,38 +151,29 @@ export default {
         </k-block>
       </k-block>
 
-      <k-list  outline-ios class="atma px-5.5 mt-5.5">
-        <k-list-item class="my-1em" :title="pers.name"   v-for="pers  in scoreOpened ? scoreList : scoreList.slice(0,3)" :key="pers.num">
+      <k-list outline-ios class="atma px-5.5 mt-5.5">
+        <k-list-item class="my-1em" :title="pers.name" v-for="pers  in scoreOpened ? scoreList : scoreList.slice(0,3)"
+                     :key="pers.num">
           <template #media>
             <k-block class="flex justify-between items-center">
-            <span class="">{{ pers.num}}</span>
-            <pic :icon-src="pers.avatar" class="mx-4.5" />
+              <span class="">{{ pers.num }}</span>
+              <pic :icon-src="pers.avatar" class="mx-4.5"/>
             </k-block>
           </template>
           <template #after>
-            <pic icon-src="Leaderboard/coin.svg" class="mx-4.5" />
-            {{ pers.score}}
+            <pic icon-src="Leaderboard/coin.svg" class="mx-4.5"/>
+            {{ pers.score }}
           </template>
         </k-list-item>
 
       </k-list>
 
       <k-block class="m-5.5">
-        <ProgressLine :progress="34" color="#2BABEE" trackColor="#C9DAE9" />
+        <ProgressLine :progress="34" color="#2BABEE" trackColor="#C9DAE9"/>
       </k-block>
       <k-block>
-        <Menu active="leaderboard" />
+        <Menu active="leaderboard"/>
       </k-block>
     </k-block>
   </k-page>
 </template>
-
-<style scoped>
-.big-digits {
-//font-size: 64px; font-size: 3.875rem;
-}
-
-.Start2lettering {
-//max-height: 178px;
-}
-</style>

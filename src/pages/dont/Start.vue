@@ -11,7 +11,6 @@ import ManStart from "../../components/ManStart.vue";
 export default {
   name: 'Start',
   components: {
-
     kIcon,
     DontLogo,
     LetsGo,
@@ -21,17 +20,6 @@ export default {
     kNavbar, kBlockTitle,
     HomePage,
   },
-  data() {
-    return {
-      isLoading: false,
-    }
-  },
-  methods: {
-  },
-  mounted() {
-    console.log('start loaded')
-  }
-
 }
 </script>
 

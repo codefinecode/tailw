@@ -1,37 +1,20 @@
 <script>
-import {kBlockTitle, kNavbar, kPage, kIcon, kBlock, kList, kListItem} from "konsta/vue";
+import {
+  kPage,
+  kBlock,
+} from "konsta/vue";
 
-import DontLogo from "@/components/DontLogo.vue";
-import Start2group from "@/components/start2/Start2group.vue";
-import TwoCoins from "@/components/TwoCoins.vue";
-import ManStart from "@/components/start3/ManStart3.vue";
-import Start2lettering from "@/components/start2/Start2lettering.vue";
-import FingerWithArrow from "@/components/FingerWithArrow.vue";
 import pic from "@/components/picture.vue";
 import Menu from "@/components/Menu.vue";
-import ProgressLine from "@/components/ProgressLine.vue";
 
 
 export default {
   name: 'FAQ',
   components: {
-    ProgressLine,
     pic,
     Menu,
-    DontLogo,
-    Start2group,
-    Start2lettering,
-    FingerWithArrow,
-    TwoCoins,
-    ManStart,
     kPage,
-    kList,
-    kListItem,
     kBlock,
-    kIcon,
-    kNavbar,
-    kBlockTitle,
-    // HomePage,
   },
   data() {
     return {
@@ -44,32 +27,20 @@ export default {
       ]
     }
   },
-  methods: {
-    boo() {
-      console.log('boo')
-    }
-  },
-  mounted() {
-    console.log('start3 loaded')
-  }
-
 }
 </script>
 
 <template>
-  <k-page class="bg-white  h-screen flex flex-col">
-
-
-    <k-block class="px-5.5" @click="$router.push({ path: '/referal' })">
-
+  <k-page class="bg-white  h-screen flex flex-col"
+          style="background: url('/src/images/FAQ/bg_questions.svg') center top no-repeat;"
+  >
+    <k-block class="px-5.5">
       <k-block class="my-12.5 px-5.5 flex justify-center items-center w-full"
-               style="background: url('/src/images/FAQ/bg.svg') no-repeat 100% 100%"
+               style="background: url('/src/images/FAQ/bg.svg') no-repeat 100% 100%; background-blend-mode: multiply;opacity: 0.8;"
                v-for="(t,key) in texts" :key="key"
       >
-        <p>{{ key+1 }}. {{t}} </p>
+        <p>{{ key + 1 }}. {{ t }} </p>
       </k-block>
-
-
       <k-block class=" mt-5.5  flex justify-center">
         <div class="relative text-center">
           <div class="absolute h-full w-full flex justify-center items-center">
@@ -81,22 +52,10 @@ export default {
       <k-block>
         <p class="atma text-center text-lg"> to get MORE </p>
       </k-block>
-
-
     </k-block>
-
     <k-block class=" mt-auto">
       <Menu active="dudes"/>
     </k-block>
   </k-page>
 </template>
 
-<style scoped>
-.big-digits {
-//font-size: 64px; font-size: 3.875rem;
-}
-
-.Start2lettering {
-//max-height: 178px;
-}
-</style>

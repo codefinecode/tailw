@@ -1,5 +1,4 @@
 <script>
-// import HomePage from '../Home.vue'
 import {kBlockTitle, kNavbar, kPage, kIcon, kBlock} from "konsta/vue";
 
 import DontLogo from "@/components/DontLogo.vue";
@@ -24,19 +23,7 @@ export default {
     kIcon,
     kNavbar,
     kBlockTitle,
-    // HomePage,
   },
-  data() {
-    return {
-      isLoading: false,
-    }
-  },
-  methods: {
-  },
-  mounted() {
-    console.log('start2 loaded')
-  }
-
 }
 </script>
 
@@ -62,17 +49,7 @@ export default {
           class="-mb-12.5 ml-12.5"
           @click="$router.push({ path: '/start3' })"
       />
-      <ManStart class=" "/>
+      <ManStart />
     </k-block>
   </k-page>
 </template>
-
-<style scoped>
-.big-digits{
-  //font-size: 64px;
-  font-size: 3.875rem;
-}
-.Start2lettering{
-//max-height: 178px;
-}
-</style>

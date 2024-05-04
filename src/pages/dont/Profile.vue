@@ -31,19 +31,7 @@ export default {
     kIcon,
     kNavbar,
     kBlockTitle,
-    // HomePage,
   },
-  data() {
-    return {}
-  },
-  methods: {
-    boo() {
-      console.log('boo')
-    }
-  },
-  mounted() {
-    console.log('start3 loaded')
-  }
 
 }
 </script>
@@ -51,7 +39,6 @@ export default {
 <template>
   <k-page class="bg-white  h-screen flex flex-col ">
     <k-block class="px-5.5">
-      <!--    @click="$router.push({ path: '/start2' })"-->
       <k-block class="w-full  flex justify-between   mt-7.5 ">
         <k-block class="w-full text-xl  ">
           Total balance
@@ -90,17 +77,7 @@ export default {
     </k-block>
 
     <k-block class=" mt-auto">
-      <Menu active="profile" />
+      <Menu active="profile"/>
     </k-block>
   </k-page>
 </template>
-
-<style scoped>
-.big-digits {
-//font-size: 64px; font-size: 3.875rem;
-}
-
-.Start2lettering {
-//max-height: 178px;
-}
-</style>

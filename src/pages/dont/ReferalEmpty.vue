@@ -31,26 +31,12 @@ export default {
     kIcon,
     kNavbar,
     kBlockTitle,
-    // HomePage,
   },
-  data() {
-    return {}
-  },
-  methods: {
-    boo() {
-      console.log('boo')
-    }
-  },
-  mounted() {
-    console.log('start3 loaded')
-  }
-
 }
 </script>
 
 <template>
-  <k-page class="bg-white  h-screen flex flex-col" >
-
+  <k-page class="bg-white  h-screen flex flex-col">
 
     <k-block class="px-5.5" @click="$router.push({ path: '/referal' })">
       <k-block class="w-full mt-5.5 text-center flex justify-center items-baseline mt-1em ">
@@ -58,19 +44,18 @@ export default {
       </k-block>
       <k-block class="mt-5.5 p-5.5 atma relative w-full"
                style="background: url('/src/images/Referal/bg.svg')  no-repeat; background-size: 100% auto; min-height: 64px;">
-        <b >1. You and your dude X100 for 10 minutes</b>
+        <b>1. You and your dude X100 for 10 minutes</b>
       </k-block>
       <k-block class="mt-5.5 p-5.5 atma relative w-full"
                style="background: url('/src/images/Referal/bg.svg')  no-repeat; background-size: 100% auto; min-height: 64px;">
-        <b >1. When your dude hits 100,000 $DONT - You and your dude X150 for 10 minutes</b>
+        <b>1. When your dude hits 100,000 $DONT - You and your dude X150 for 10 minutes</b>
       </k-block>
-      <k-block class="w-full  flex justify-center   mt-7.5 " >
+      <k-block class="w-full  flex justify-center   mt-7.5 ">
         <pic icon-src="Referal/crying_man.png" class=""/>
       </k-block>
-      <k-block class="mt-5.5 p-5.5  text-center text-xl w-full" >
-        <p >You didn't invite <br> a single dude...</p>
+      <k-block class="mt-5.5 p-5.5  text-center text-xl w-full">
+        <p>You didn't invite <br> a single dude...</p>
       </k-block>
-
       <k-block class=" mt-5.5  flex justify-center">
         <div class="relative text-center">
           <div class="absolute h-full w-full flex justify-center items-center">
@@ -82,12 +67,10 @@ export default {
       <k-block>
         <p class="atma text-center text-lg"> to get MORE </p>
       </k-block>
-
-
     </k-block>
 
     <k-block class=" mt-auto">
-      <Menu active="dudes" />
+      <Menu active="dudes"/>
     </k-block>
   </k-page>
 </template>

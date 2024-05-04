@@ -9,7 +9,6 @@ import Start2lettering from "@/components/start2/Start2lettering.vue";
 import FingerWithArrow from "@/components/FingerWithArrow.vue";
 import pic from "@/components/picture.vue";
 
-
 export default {
   name: 'Start3',
   components: {
@@ -27,20 +26,6 @@ export default {
     kBlockTitle,
     // HomePage,
   },
-  data() {
-    return {
-      isLoading: false,
-    }
-  },
-  methods: {
-    boo(){
-      console.log('boo')
-    }
-  },
-  mounted() {
-    console.log('start3 loaded')
-  }
-
 }
 </script>
 
@@ -73,13 +58,3 @@ export default {
     </k-block>
   </k-page>
 </template>
-
-<style scoped>
-.big-digits{
-  //font-size: 64px;
-  font-size: 3.875rem;
-}
-.Start2lettering{
-//max-height: 178px;
-}
-</style>

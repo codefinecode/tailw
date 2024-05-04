@@ -60,7 +60,7 @@ export default {
         <p class="big-digits text-black mt-12.5">355</p>
       </k-block>
       <k-block class="w-full flex justify-end safe-areas mr-5.5">
-        <progress-circle :progress="75" color="#ff6347"/>
+        <progress-circle :progress="90" color="#ff6347"/>
 <!--        <pic icon-src="home/x2blue_bordered.svg" alt="x2"/>-->
       </k-block>
     </k-block>
@@ -84,7 +84,7 @@ export default {
         </k-block>
       </k-block>
       <k-block class="m-5.5">
-        <ProgressLine :progress="50" color="#ff6347" trackColor="#e0e0e0" />
+        <ProgressLine :progress="34" color="#2BABEE" trackColor="#C9DAE9" />
       </k-block>
       <k-block>
         <Menu active="home" />

@@ -15,12 +15,12 @@ export default {
 </script>
 
 <template>
-  <k-navbar class="p-5.5">
+  <k-block class="p-5.5 flex justify-between">
     <k-block  @click="$router.push({ path: '/home' })">
       <pic :icon-src="active === 'home' ? 'home/home_blue.svg' : 'menu_Home.svg'"/>
     </k-block>
     <k-block @click="$router.push({ path: '/profile' })">
-      <pic :icon-src="active === 'profile' ? 'menu_profile.svg' : 'menu_profile.svg'"/>
+      <pic :icon-src="active === 'profile' ? 'Profile/profile_blue.svg' : 'menu_profile.svg'"/>
     </k-block>
     <k-block  @click="$router.push({ path: '/leaderboard' })">
       <pic :icon-src="active === 'leaderboard' ? 'Leaderboard/leaderboard_blue.svg' : 'menu_Leaderboard.svg'"/>
@@ -28,7 +28,7 @@ export default {
     <k-block @click="$router.push({ path: '/referal' })">
       <pic :icon-src="active === 'dudes' ? 'Referal/Dudes_blue.svg' : 'menu_Dudes.svg'"/>
     </k-block>
-  </k-navbar>
+  </k-block>
 </template>
 
 <style scoped>

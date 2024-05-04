@@ -13,7 +13,7 @@ import ProgressLine from "@/components/ProgressLine.vue";
 
 
 export default {
-  name: 'Referal',
+  name: 'ReferalEmpty',
   components: {
     ProgressLine,
     pic,
@@ -57,11 +57,11 @@ export default {
         <p class="atma">By inviting a dude, you'll get those kinds of cookies:</p>
       </k-block>
       <k-block class="mt-5.5 p-5.5 atma relative w-full"
-               style="background: url('/src/images/Referal/bg.svg') no-repeat">
+               style="background: url('/src/images/Referal/bg.svg')  no-repeat; background-size: 100% auto; min-height: 64px;">
         <b >1. You and your dude X100 for 10 minutes</b>
       </k-block>
       <k-block class="mt-5.5 p-5.5 atma relative w-full"
-               style="background: url('/src/images/Referal/bg.svg') no-repeat">
+               style="background: url('/src/images/Referal/bg.svg')  no-repeat; background-size: 100% auto; min-height: 64px;">
         <b >1. When your dude hits 100,000 $DONT - You and your dude X150 for 10 minutes</b>
       </k-block>
       <k-block class="w-full  flex justify-center   mt-7.5 " >

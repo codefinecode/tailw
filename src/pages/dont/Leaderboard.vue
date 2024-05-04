@@ -102,7 +102,8 @@ export default {
         34
       </k-block>
       <k-block class="flex w-full justify-center mt-12.5">
-        <ProgressLine />
+        <ProgressLine :progress="34" color="#2BABEE" trackColor="#C9DAE9" />
+
       </k-block>
     </k-block>
     <k-block class="text-center mt-5.5">
@@ -131,8 +132,10 @@ export default {
       <p class="atma text-center text-lg"> to get MORE </p>
     </k-block>
 
+<!--    :style="`background: url(/src/images/Leaderboard/${ scoreOpened ? 'bg_opened.svg' : 'bg_closed.svg'})  center center / 100% 100% no-repeat; height: 100%;width:100%;`">-->
 
-    <k-block class="w-full  mt-auto pt-5.5 " :style="`background: url(/src/images/Leaderboard/${ scoreOpened ? 'bg_opened.svg' : 'bg_closed.svg'})`">
+    <k-block class="w-full  mt-auto pt-5.5 "
+             :style="`background: url(/src/images/Leaderboard/bg_opened.svg) no-repeat; background-size: 100% auto; min-height: auto;`">
       <k-block class=" flex justify-center w-full">
         <pic
           :icon-src="`Leaderboard/${ scoreOpened ? 'arrow_close.svg' : 'arrow_open.svg'}`"
@@ -176,7 +179,7 @@ export default {
       </k-list>
 
       <k-block class="m-5.5">
-        <pic icon-src="progress_line.svg"/>
+        <ProgressLine :progress="34" color="#2BABEE" trackColor="#C9DAE9" />
       </k-block>
       <k-block>
         <Menu active="leaderboard" />

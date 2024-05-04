@@ -42,7 +42,6 @@ const routes = [
   return {
     component,
     path: name === 'Start' ? '/' : path,
-    // path: name === 'HomePage' ? '/' : path,
     title,
   };
 });

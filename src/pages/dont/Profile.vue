@@ -70,7 +70,7 @@ export default {
       </k-block>
 
       <k-block class="mt-5.5 p-5.5 atma relative w-full"
-               style="background: url('/src/images/Profile/bg_subscribe.svg') no-repeat">
+               style="background: url('/src/images/Profile/bg_subscribe.svg')  no-repeat; background-size: 100% auto; min-height: auto;">
         <pic icon-src="Profile/Acceleration.png" class="absolute right-1em top-0"/>
         <b class="">Subscribe to the Telegram and Twitter channels</b>
         <p>Get x50 for 10 minutes</p>
@@ -81,7 +81,7 @@ export default {
       </k-block>
 
       <k-block class="mt-4.5  p-5.5 pl-7.5 atma relative w-full text-gray-400"
-               style="background: url('/src/images/Profile/bg_stay-on.svg') no-repeat">
+               style="background: url('/src/images/Profile/bg_stay-on.svg')  no-repeat; background-size: 100% auto; min-height: auto;">
         <pic icon-src="Profile/Acceleration.png" class="absolute right-1em top-0"/>
         <b class="">Stay on the main screen for 10 minutes.</b>
         <p>Get x50 for 10 minutes</p>

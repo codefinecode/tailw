@@ -1,5 +1,5 @@
 <template>
-  <svg :width="size" :height="size" :viewBox="`0 0 ${size} ${size}`" xmlns="http://www.w3.org/2000/svg">
+  <svg :width="size" :height="size" :viewBox="`0 0 ${viewBoxSize} ${viewBoxSize}`" xmlns="http://www.w3.org/2000/svg">
     <path d="M49.763 14.5273C22.5637 12.8115 14.9949 22.0828 10.7244 38.8294C8.02073 52.1145 13.5663 60.4349 38.8004 65.5646C70.3431 71.9768 74.3184 55.0461 74.6396 55.128C74.9607 55.2099 83.762 16.672 49.763 14.5273Z" :fill="color"/>
     <path
         d="M51.1907 9.97458C19.3751 7.96761 10.5216 18.8124 5.5263 38.4014C2.36377 53.9412 8.85053 63.6738 38.3675 69.6742C75.2637 77.1747 79.9138 57.3704 80.2894 57.4662C80.6651 57.562 90.9601 12.4833 51.1907 9.97458Z"
@@ -38,6 +38,10 @@ export default {
     },
     dashOffset() {
       return this.circumference - (this.progress / 100) * this.circumference
+    },
+    viewBoxSize() {
+      // Учитываем ширину обводки для корректного отображения
+      return this.size + (this.size * 0.15) // 0.15 - примерное значение для коррекции обводки
     }
   }
 }

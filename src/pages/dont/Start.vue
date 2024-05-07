@@ -1,6 +1,7 @@
 <script>
 import HomePage from '../Home.vue'
-import {kBlockTitle, kNavbar, kPage, kIcon} from "konsta/vue";
+
+import {kBlockTitle, kNavbar, kPage, kIcon,kBlock,} from "konsta/vue";
 
 import DontLogo from "../../components/DontLogo.vue";
 import LetsGo from "../../components/LetsGo.vue";
@@ -12,6 +13,7 @@ export default {
   name: 'Start',
   components: {
     kIcon,
+    kBlock,
     DontLogo,
     LetsGo,
     TwoCoins,

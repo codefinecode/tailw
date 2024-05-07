@@ -42,11 +42,11 @@ export default {
         <pic icon-src="start3/x2blue.svg" alt="x2"  />
       </k-block>
     </k-block>
-    <k-block class="my-15">
+    <k-block class="my-auto">
       <p class="text-center text-xl">Bring more dudes brto make X bigger</p>
     </k-block>
 
-    <k-block class="w-full flex justify-end">
+    <k-block class="w-full flex justify-end -mb-12.5">
       <Start2lettering class="" title="The more X <br>the more $DONT!"/>
     </k-block>
     <k-block class="w-full flex justify-between items-center mt-auto">

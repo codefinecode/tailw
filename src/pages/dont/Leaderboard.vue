@@ -74,6 +74,9 @@ export default {
           score: 10.500
         },
       ],
+      currentUserName: 'Olo_lo (You)',
+      buttons: ['All time', 'Daily'],
+      activeButton: 'All time',
     }
   },
 }
@@ -86,7 +89,7 @@ export default {
       <k-block class="atma w-full">
         Olo-lo
       </k-block>
-      <k-block class="w-full text-3xl text-light-blue ">
+      <k-block class="w-full text-2xl text-light-blue ">
         League name
       </k-block>
       <k-block class="w-full text-black big-digits mt-5.5">
@@ -132,28 +135,23 @@ export default {
         />
       </k-block>
 
-      <k-block class="w-full flex justify-around items-center">
-        <k-block class=" ">
+      <k-block class="w-full atma  flex justify-around items-center">
+        <k-block v-for="button in buttons">
           <div class="relative">
             <div class="absolute h-full w-full flex justify-center items-center">
-              <p class=" text-2xl w-2/3 text-center ">All time</p>
+              <p class=" text-2xl w-2/3 text-center " :class="button === activeButton ? 'font-bold' : ''">{{ button }}</p>
             </div>
-            <pic icon-src="Leaderboard/button_left_blue.svg"/>
-          </div>
-        </k-block>
-        <k-block class=" ">
-          <div class="relative">
-            <div class="absolute h-full w-full flex justify-center items-center">
-              <p class=" text-2xl w-2/3 text-center  ">Daily</p>
-            </div>
-            <pic icon-src="Leaderboard/button_right_light-blue.svg"/>
+            <pic :icon-src="button === activeButton ? 'Leaderboard/button_left_blue.svg' : 'Leaderboard/button_right_light-blue.svg'"/>
           </div>
         </k-block>
       </k-block>
 
       <k-list outline-ios class="atma px-5.5 mt-5.5">
-        <k-list-item class="my-1em" :title="pers.name" v-for="pers  in scoreOpened ? scoreList : scoreList.slice(0,3)"
-                     :key="pers.num">
+        <k-list-item class="my-1em"
+                     :class="pers.name === currentUserName ? 'font-bold': ''"
+                     :title="pers.name" v-for="(pers, key)  in scoreOpened ? scoreList : scoreList.slice(0,3)"
+                     :key="pers.num"
+        >
           <template #media>
             <k-block class="flex justify-between items-center">
               <span class="">{{ pers.num }}</span>
@@ -163,6 +161,15 @@ export default {
           <template #after>
             <pic icon-src="Leaderboard/coin.svg" class="mx-4.5"/>
             {{ pers.score }}
+            <span v-if="[0,1,2].includes(key)">
+              <pic
+                  :icon-src="
+                  key === 0 ? 'Leaderboard/star_gold.svg'
+                  : (key === 1 ?  'Leaderboard/star_grey.svg'
+                  : (key === 2 ?  'Leaderboard/star_brown.svg' : '' ) ) "
+                  class="mx-4.5"
+              />
+            </span>
           </template>
         </k-list-item>
 

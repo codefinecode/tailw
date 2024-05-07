@@ -7,6 +7,15 @@ export default defineConfig({
   build:{
     minify:false,
     cssMinify:false,
+    rollupOptions: {
+      input: {
+        'main': path.resolve(__dirname, 'src/main.js'),
+      },
+      output: {
+        entryFileNames: '[name].js',
+        chunkFileNames: 'chunks/[name].js'
+      }
+    }
   },
   plugins: [vue(
         {

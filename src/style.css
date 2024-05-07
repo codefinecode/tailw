@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap');
 
 @font-face {
-  font-family: adlib;
-  src: url('./fonts/AdLib.woff');
+    font-family: adlib;
+    src: url('./fonts/AdLib.woff');
 }
 
 @tailwind base;
@@ -11,16 +11,20 @@
 /*@tailwind variants;*/
 
 .atma {
-  font-family: Atma;
-}
-body{
-  font-family: adlib;
-  background: #ffffff;
+    font-family: Atma;
 }
 
-.text-light-blue{
-  color: #7AAEDC;
+body {
+    font-family: adlib;
+    background: #ffffff;
 }
+.text-primary{
+    color: #2BABEE;
+}
+.text-light-blue {
+    color: #7AAEDC;
+}
+
 .big-digits {
-  font-size: 3.875rem;
+    font-size: 3.875rem;
 }

@@ -31,7 +31,6 @@ export default {
     kIcon,
     kNavbar,
     kBlockTitle,
-    // HomePage,
   },
   data() {
     return {
@@ -83,18 +82,17 @@ export default {
 </script>
 
 <template>
-  <k-page class="bg-white  h-screen flex flex-col">
-    <!--    @click="$router.push({ path: '/start2' })"-->
+  <k-page class="bg-white  ">
     <k-block class="w-full  text-center   mt-7.5 ">
-      <k-block class="atma w-full">
+      <p class="atma font-normal">
         Olo-lo
-      </k-block>
-      <k-block class="w-full text-2xl text-light-blue ">
+      </p>
+      <p class="w-full text-2xl text-light-blue ">
         League name
-      </k-block>
-      <k-block class="w-full text-black big-digits mt-5.5">
+      </p>
+      <p class="w-full text-black big-digits mt-5.5">
         34
-      </k-block>
+      </p>
       <k-block class="flex w-full justify-center mt-12.5">
         <ProgressLine :progress="34" color="#2BABEE" trackColor="#C9DAE9"/>
 

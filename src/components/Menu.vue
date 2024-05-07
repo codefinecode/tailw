@@ -34,6 +34,3 @@ export default {
   </k-block>
 </template>
 
-<style scoped>
-
-</style>

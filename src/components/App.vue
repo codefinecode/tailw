@@ -12,13 +12,14 @@
       kApp,
     },
     setup() {
-      // const theme = ref('ios');
+      const theme = ref('ios');
+      // const theme = ref('material');
+
       const rootCSS = document.querySelector(':root');
       const calcMy = computed(() => {
         return '16px'
       })
       const orientation = ref('PORTRAIT');
-      const theme = ref('material');
       const currentColorTheme = ref('');
       const setColorTheme = (color) => {
         const htmlEl = document.documentElement;
@@ -75,7 +76,8 @@
           if (mode === 'dark') document.documentElement.classList.add('dark');
           else document.documentElement.classList.remove('dark');
         };
-        setTheme('material')
+        // setTheme('material')
+        setTheme('ios')
         setColorTheme('bg-white')
 
         calcSafeAreas();

@@ -1,5 +1,5 @@
 <template>
-  <k-app :theme="theme" :safe-areas="!inIFrame" class="bg-white" style="background: #ffffff !important;">
+  <k-app :theme="theme" :dark="false" :safe-areas="!inIFrame">
     <router-view />
   </k-app>
 </template>

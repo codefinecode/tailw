@@ -28,3 +28,7 @@ body {
 .big-digits {
     font-size: 3.875rem;
 }
+
+.dark\:bg-ios-dark-surface{
+    background: white !important;
+}
